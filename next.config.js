@@ -7,4 +7,9 @@ module.exports = {
         buildActivityPosition: "bottom-right",
     },
     swcMinify: false,
+
+    i18n: {
+        locales: ["en", "pyc", "de", "el", "pl"],
+        defaultLocale: "en",
+    },
 }

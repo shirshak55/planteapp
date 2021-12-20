@@ -5,3 +5,8 @@
 body {
     height: 1vh;
 }
+
+.checkmark {
+    -webkit-transform: scaleX(-1) rotate(-35deg); /* Chrome, Safari, Opera */
+    transform: scaleX(-1) rotate(-35deg);
+}

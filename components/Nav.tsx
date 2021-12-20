@@ -20,14 +20,14 @@ export default function Nav() {
 
                     <div className="xl:pl-0 mx-auto sm:mx-0   sm:flex sm:items-center sm:justify-between">
                         <div className="relative max-w-3xl  sm:flex sm:justify-end">
-                            <Link passHref={true} href="/privacy-policy">
-                                <div className="my-2 py-2 no-underline hover:no-underline  flex items-center justify-center bg-transparent hover:bg-brand focus:border-teal-900 font-bold px-5 rounded hover:text-black">
+                            <Link passHref={true} href="/privacy">
+                                <div className="my-2 py-2 no-underline hover:no-underline  flex items-center justify-center bg-transparent hover:bg-brand focus:border-teal-900 font-bold px-5 rounded hover:text-black cursor-pointer">
                                     <span className="pl-2">Privacy Policy</span>
                                 </div>
                             </Link>
 
-                            <Link passHref={true} href="/contact-us">
-                                <div className="my-2 py-2 no-underline hover:no-underline  flex items-center justify-center bg-transparent hover:bg-brand focus:border-teal-900 font-bold px-5 rounded hover:text-black">
+                            <Link passHref={true} href="/contact">
+                                <div className="my-2 py-2 no-underline hover:no-underline  flex items-center justify-center bg-transparent hover:bg-brand focus:border-teal-900 font-bold px-5 rounded hover:text-black cursor-pointer">
                                     <span className="pl-2">Contact Us</span>
                                 </div>
                             </Link>
