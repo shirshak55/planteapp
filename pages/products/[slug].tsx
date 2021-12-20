@@ -14,6 +14,16 @@ export default function ShowProduct({}) {
             fetch(`https://world.openfoodfacts.org/api/v2/product/${slug}`)
                 .then((resp) => resp.json())
                 .then((json) => setOpenFoodFact(json.product))
+                .catch((e) => console.log("Error on fetch", e))
+        }
+    }, [slug])
+
+    useEffect(() => {
+        if (slug) {
+            fetch(`https://planteapp.com/backend/product_data/?barcode=${slug}`)
+                .then((resp) => resp.json())
+                .then((json) => setOpenFoodFact(json.product))
+                .catch((e) => console.log("Error on fetch", e))
         }
     }, [slug])
 
@@ -37,6 +47,9 @@ export default function ShowProduct({}) {
                             </h2>
 
                             <div className="py-4 border-t border-b text-xs text-gray-700">
+                                <h2 className=" text-lg text-gray-900 font-medium title-font mb-4 whitespace-nowrap truncate ... ">
+                                    Ingredients:
+                                </h2>
                                 <div className="">
                                     {openFoodFact?.ingredients?.map((ing: any) => (
                                         <div className="flex justify-between p-2" key={ing.id}>
@@ -46,7 +59,7 @@ export default function ShowProduct({}) {
                                                     ing.vegan == "yes" ? "bg-green-400" : "bg-red-400"
                                                 } rounded-full `}
                                             >
-                                                {ing.percent_estimate}%
+                                                {ing.percent_estimate?.toFixed(2)}%
                                             </span>
                                         </div>
                                     ))}
