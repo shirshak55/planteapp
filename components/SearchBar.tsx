@@ -3,7 +3,7 @@ import React, { FormEvent } from "react"
 export function SearchBar() {
     const handleSubmit = (event: FormEvent) => {
         event.preventDefault()
-        console.log(event)
+        //@ts-ignore
         window.location.href = `/products/${event.target.search.value}`
     }
 
