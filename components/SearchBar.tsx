@@ -4,7 +4,7 @@ export function SearchBar() {
     const handleSubmit = (event: FormEvent) => {
         event.preventDefault()
         //@ts-ignore
-        window.location.href = `/product/${event.target.search.value}`
+        window.location.href = `/products/${event.target.search.value}`
     }
 
     return (
