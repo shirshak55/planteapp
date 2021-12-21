@@ -47,7 +47,7 @@ export default function ShowProduct({}) {
                 {isOpenFoodFactLoading && <p>Loading data from server...</p>}
                 {!isOpenFoodFactLoading && (
                     <>
-                        {openFoodFact.product && (
+                        {openFoodFact.product_name && (
                             <div className=" c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden ">
                                 <img
                                     className=" lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72 rounded w-full object-cover object-center mb-4 "
@@ -152,7 +152,7 @@ C448.145,25.654,448.461,35.099,447.35,44.73z"
                                 </div>
                             </div>
                         )}
-                        {!openFoodFact.product && (
+                        {!openFoodFact.product_name && (
                             <div className=" c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden p-10">
                                 <p> Sorry! Product not found</p>
                             </div>
