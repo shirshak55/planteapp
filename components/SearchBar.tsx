@@ -1,11 +1,19 @@
-import React, { FormEvent } from "react"
+import React, { FormEvent, useEffect, useState } from "react"
 
 export function SearchBar() {
+    let [input, setInput] = useState("")
     const handleSubmit = (event: FormEvent) => {
         event.preventDefault()
         //@ts-ignore
         window.location.href = `/products/${event.target.search.value}`
     }
+
+    useEffect(() => {
+        if (window?.location?.href.includes("products")) {
+            let split = window.location.href.split("/")
+            setInput(split[split.length - 1])
+        }
+    }, [])
 
     return (
         <>
@@ -16,6 +24,8 @@ export function SearchBar() {
                         type="search"
                         name="search"
                         placeholder="Search Product Using Barcode"
+                        value={input}
+                        onInput={(e) => setInput((e.target as HTMLInputElement).value)}
                     />
                     <button type="submit" className="absolute right-2 top-3 mr-4">
                         <svg
