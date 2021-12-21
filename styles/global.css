@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 body {
-    height: 1vh;
+    height: 100vh;
+    display: block;
 }
 
 .checkmark {
