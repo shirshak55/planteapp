@@ -3,8 +3,11 @@ import SocialMedia from "./SocialMedia"
 import Link from "next/link"
 import Image from "next/image"
 import { SearchBar } from "./SearchBar"
+import { useTranslation } from "next-i18next"
 
 export default function Hero() {
+    const { t } = useTranslation()
+
     return (
         <div className="w-full mt-4 header_hero bg-gray relative z-10 overflow-hidden ">
             <div className="mx-auto">
@@ -14,30 +17,29 @@ export default function Hero() {
                     </div>
 
                     <div className="mx-10  max-w-2xl">
-                        <h2 className="font-bold text-3xl">Community Based Vegan Groceries Map</h2>
+                        <h2 className="font-bold text-3xl">{t('hero:title_str')}</h2>
                         <SearchBar />
                         <p className="p-4">
-                            Plante is a community-based app. Join us by adding your favorite products to the map and
-                            help others discover something delicious!
+                            {t('hero:short_desk_str')}
                         </p>
                         <div className="p-4">
                             <div className="flex items-center mb-4">
                                 <span className="bg-gray-50 border-gray-300 focus:ring-3 focus:ring-blue-300 h-4 w-4 rounded flex justify-center items-center">
                                     <span className=" checkmark">L</span>
                                 </span>
-                                <span className="ml-4">Scan to check if a product is vegan</span>
+                                <span className="ml-4">{t("hero:check_box_1")}</span>
                             </div>
                             <div className="flex items-start mb-4">
                                 <span className="bg-gray-50 border-gray-300 focus:ring-3 focus:ring-blue-300 h-4 w-4 rounded flex justify-center items-center">
                                     <span className=" checkmark">L</span>
                                 </span>
-                                <span className="ml-4">See stores and groceries on a map</span>
+                                <span className="ml-4">{t("hero:check_box_2")}</span>
                             </div>
                             <div className="flex items-start mb-4">
                                 <span className="bg-gray-50 border-gray-300 focus:ring-3 focus:ring-blue-300 h-4 w-4 rounded flex justify-center items-center">
                                     <span className=" checkmark">L</span>
                                 </span>
-                                <span className="ml-4">Add new products and stores</span>
+                                <span className="ml-4">{t("hero:check_box_3")}</span>
                             </div>
                         </div>
                         <div className="flex my-4 items-center">
