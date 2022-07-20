@@ -1,6 +1,6 @@
 import Hero from "../components/Hero"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-/*import 'tw-elements';*/
+
 
 
 export async function getStaticProps({ locale }: any) {
