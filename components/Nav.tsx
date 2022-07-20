@@ -3,7 +3,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { useTranslation } from "next-i18next"
 import { i18n } from 'next-i18next'
-import Example from "./DropDown"
+import DropDownLangSwitch from "./DropDown"
 
 export default function Nav() {
     const { t } = useTranslation()
@@ -42,7 +42,7 @@ export default function Nav() {
                                 </div>
                             </Link>
                         </div>
-                        <Example/>
+                        <DropDownLangSwitch/>
                     </div>
                 </div>
             </nav>

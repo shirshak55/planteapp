@@ -4,7 +4,7 @@ import { i18n } from "next-i18next"
 import Link from "next/link"
 
 
-export default function Example() {
+export default function DropDownLangSwitch() {
 
     const languages = [
         {
