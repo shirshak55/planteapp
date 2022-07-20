@@ -2,41 +2,12 @@ import React from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { useTranslation } from "next-i18next"
+import { i18n } from 'next-i18next'
+import Example from "./DropDown"
 
 export default function Nav() {
     const { t } = useTranslation()
-    const languages = [
-        {
-            code: 'fr',
-            name: 'Français',
 
-        },
-        {
-            code: 'en',
-            name: 'English',
-
-        },
-        {
-            code: 'de',
-            name: 'German',
-
-        },
-        {
-            code: 'el',
-            name: 'Greek',
-
-        },
-        {
-            code: 'pl',
-            name: 'Polish',
-
-        },
-
-        {
-            code: 'ru',
-            name: 'Russian',
-        },
-    ]
     return (
         <>
             <nav className="bg-white w-full z-10 top-0 shadow ">
@@ -71,24 +42,7 @@ export default function Nav() {
                                 </div>
                             </Link>
                         </div>
-                    </div>
-
-                    <div className="p-4">
-                        <div className="group relative">
-                            <button className="bg-gray-800 text-white px-6 h-10 rounded">Lang</button>
-                            <nav tabIndex={0}
-                                 className="border border-2 bg-white invisible border-gray-800 rounded w-60 absolute left-0 top-full transition-all opacity-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-1">
-                                <ul className="py-1">
-                                    {languages.map(({code, name}) => (
-                                        <li key={name}>
-                                            <Link href="/" locale={code}>
-                                                <a>{name}</a>
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </nav>
-                        </div>
+                        <Example/>
                     </div>
                 </div>
             </nav>
