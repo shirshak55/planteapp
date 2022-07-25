@@ -1,10 +1,12 @@
 import React from "react"
 import Link from "next/link"
+import { useTranslation } from "next-i18next"
 
 export default function SocialMedia() {
+    const { t } = useTranslation()
     return (
         <div className=" my-4">
-            <h4 className="font-semibold my-4 mb-6 text-gray-700">Follow us on Social Media</h4>
+            <h4 className="font-semibold my-4 mb-6 text-gray-700">{t('socialmedia:cta_str')}</h4>
 
             <div className="flex flex-wrap  gap-2">
                 <div className="bg-blue-500 p-2 font-semibold text-white cursor-pointer inline-flex items-center space-x-2 rounded">
@@ -30,6 +32,7 @@ export default function SocialMedia() {
                     </Link>
                 </div>
             </div>
+
         </div>
     )
 }

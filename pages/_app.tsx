@@ -1,9 +1,10 @@
 import "../styles/global.css"
+import { appWithTranslation } from 'next-i18next'
 
 import type { AppProps } from "next/app"
 import Nav from "../components/Nav"
 
-export default function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
     return (
         <>
             <Nav />
@@ -11,3 +12,5 @@ export default function App({ Component, pageProps }: AppProps) {
         </>
     )
 }
+
+export default appWithTranslation(App)

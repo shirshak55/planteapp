@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+const { i18n } = require('./next-i18next.config')
 module.exports = {
     reactStrictMode: true,
     poweredByHeader: false,
@@ -8,8 +9,5 @@ module.exports = {
     },
     swcMinify: false,
 
-    i18n: {
-        locales: ["en", "pyc", "de", "el", "pl"],
-        defaultLocale: "en",
-    },
+    i18n
 }
